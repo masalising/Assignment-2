@@ -84,10 +84,13 @@ section p{
 /* Customer Comment Styles */
 aside{
    width: 75%;
+   /* Bottom padding created a gap between the footer and customer comments section when resizinf the window? */
    padding-bottom: 30px;
+   /* padding-bottom: 30px; */
    /* Added to center the comment section */
    margin-left: auto;
    margin-right: auto;
+   
 }
 
 aside :nth-of-type(odd){
