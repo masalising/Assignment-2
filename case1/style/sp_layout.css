@@ -39,9 +39,24 @@ body{
    grid-template-areas: "body body body body";
 }
 
+#logo{
+   grid-column: span 3;
+   width: 100%;
+}
+
 /* Horizontal Navigation List Styles */
+footer{
+   grid-column: span 4;
+}
+aside{
+   grid-column: span 2;
+}
+.horizontal li{
+   display: block;
+   width: 12.5%;
+   float: left;
 
-
+}
 
 /* Section Styles */
 
