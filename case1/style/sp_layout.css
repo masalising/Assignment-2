@@ -43,6 +43,7 @@ body{
 #logo{
    grid-column: span 3;
    width: 100%;
+   /* Added to remove the horizontal white space under the logo  */
    height: 100%;
 }
 
@@ -84,6 +85,7 @@ section p{
 aside{
    width: 75%;
    padding-bottom: 30px;
+   /* Added to center the comment section */
    margin-left: auto;
    margin-right: auto;
 }
