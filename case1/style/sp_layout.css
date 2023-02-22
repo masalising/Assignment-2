@@ -28,8 +28,7 @@ body{
    margin-left: auto;
    margin-right: auto;
    display: grid;
-   height: 100%;
-   
+   min-height: 100%;/*fixed the gap made by padding-bottom 30px*/   
 }
 
 img{
@@ -38,7 +37,8 @@ img{
 
 /* CSS Grid Styles */
 body{
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+   grid-template-columns: 25% 25% 25% 25%;
    grid-template-areas: "body body body body";
 }
 
@@ -50,17 +50,17 @@ body{
 }
 
 /* Horizontal Navigation List Styles */
-.horizontal {
+nav.horizontal, footer{
    grid-column: span 4;
 }
 
-footer{
+/* footer{
    grid-column: span 4;
-}
+} */
 aside{
    grid-column: span 2;
 }
-.horizontal li{
+nav.horizontal li{
    display: block;
    width: 12.5%;
    float: left;
@@ -69,14 +69,15 @@ aside{
 
 /* Section Styles */
 section img{
-   width: 50%;
-   margin-top: 0%;
+   width: 50%; /*makes the image smaller */
+   /* margin-top: 0%;
    margin-bottom: 0%;
    margin-left: auto;
-   margin-right: auto;
+   margin-right: auto; */
+   margin: 0 auto 0 auto; /*same as above */
 }
 section p{
-   width: 70%;
+   width: 70%; /* shrink the text under the images*/
    margin-top: 0%;
    margin-bottom: 0%;
    margin-left: auto;
@@ -86,16 +87,15 @@ section p{
 /* Customer Comment Styles */
 aside{
    width: 75%;
-   /* Bottom padding created a gap between the footer and customer comments section when resizinf the window? */
+   /* Bottom padding created a gap between the footer and customer comments section when resizing the window? - fixed by min-height under body tag*/
    padding-bottom: 30px;
-   /* padding-bottom: 30px; */
-   /* Added to center the comment section */
-   margin-left: auto;
-   margin-right: auto;
+   /* Added to center the comment section - this happened because aside :nth has space*/
+   /* margin-left: auto;
+   margin-right: auto; */
    
 }
 
-aside :nth-of-type(odd){
+aside:nth-of-type(odd){ /*if aside space :nth, it doesn't work. musn't have space*/
    /* display: grid; */
    justify-self: right;
 }
@@ -108,7 +108,7 @@ aside img{
 aside p{
    float: left;
    width: 75%;
-   margin-left: 5%;
+   margin-left: 5%; 
 }
 
 
