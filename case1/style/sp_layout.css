@@ -16,7 +16,7 @@
 /* Window and Body Styles */
 html{
    height: 100%;
-   min-height: 100%;
+   
 
 }
 
@@ -27,24 +27,24 @@ body{
    /* to center the body: */
    margin-left: auto;
    margin-right: auto;
-   display: grid;
    min-height: 100%;/*fixed the gap made by padding-bottom 30px*/   
 }
 
 img{
-   display: block;
+   display: block; 
 }
 
 /* CSS Grid Styles */
 body{
+   display: grid;
    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
    grid-template-columns: 25% 25% 25% 25%;
-   grid-template-areas: "body body body body";
+  
 }
 
-#logo{
-   grid-column: span 3;
+img#logo{
    width: 100%;
+   grid-column: span 3;
    /* Added to remove the horizontal white space under the logo  */
    height: 100%;
 }
